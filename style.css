@@ -2,11 +2,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  margin: auto;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-
 }
 
 textarea{
@@ -38,7 +33,7 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -75,33 +70,39 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-table, th, td {
+#currentDay {
+  color: #2bb92b;
+  font-weight: 800;
+}
+/* table, th, td {
 	border: 1px black solid;
-}
+} */
 
-td {
+/* td {
 	height:5rem;
-}
+} */
 
-.container {
+/* .container {
   width: 70%;
   flex-direction: column;
   justify-content: center;
   margin-left: auto;
   margin-right:auto;
+} */
+
+/* .event-row {
+  width: 100%;
+  margin-bottom: 1px;
 }
 
-.event-bar {
-  width: 100%;
-}
 .time-td {
   width:12rem;
 }
 
 .text-td {
-  width:30rem;
-}
+  width:50rem;
+} */
 
-.save-td {
+/* .save-td {
   width:12rem;
-}
+} */
