@@ -63,6 +63,7 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  text-align:center; 
 }
 
 .saveBtn i:hover {
@@ -71,42 +72,14 @@ textarea{
 }
 
 #currentDay {
-  color: #2bb92b;
+  color: #739ad4;
   font-weight: 800;
 }
 
 .display-3 {
   font-size:3rem;
 }
-/* table, th, td {
-	border: 1px black solid;
-} */
 
-/* td {
-	height:5rem;
-} */
 
-/* .container {
-  width: 70%;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: auto;
-  margin-right:auto;
-} */
 
-/* .event-row {
-  width: 100%;
-  margin-bottom: 1px;
-}
 
-.time-td {
-  width:12rem;
-}
-
-.text-td {
-  width:50rem;
-} */
-
-/* .save-td {
-  width:12rem;
-} */
