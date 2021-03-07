@@ -74,6 +74,10 @@ textarea{
   color: #2bb92b;
   font-weight: 800;
 }
+
+.display-3 {
+  font-size:3rem;
+}
 /* table, th, td {
 	border: 1px black solid;
 } */
