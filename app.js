@@ -21,8 +21,10 @@ for(i=9; i<18; i++){
     var someText = $('textarea').value
     // console.log(someText)
     var save = $('<td>').addClass('saveBtn col-md-2 col-sm-1');
-    var saveButton = $('<i>').addClass('fas fa-save fa-2x');
-    
+    var sbtn = $('<i>').addClass('subBtn fas fa-save fa-2x');
+    // var saveButton = $('<i>').addClass('subBtn fas fa-save fa-2x');
+        var saveButton = $('<button>')
+        saveButton.append(sbtn)
         if(i < 12) {
             apm = 'AM'
         } else {
@@ -40,9 +42,9 @@ for(i=9; i<18; i++){
             textArea.addClass('future')
         }
   
-
-
-    // console.log($.trim(someText))
+        $('.subBtn').click(function(e){
+            console.log(e);
+        });
 
    
 

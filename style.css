@@ -69,10 +69,10 @@ textarea{
   text-align:center; 
 }
 
-.saveBtn i:hover {
+/* .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
-}
+} */
 
 #currentDay {
   color: #739ad4;
@@ -83,6 +83,9 @@ textarea{
   font-size:3rem;
 }
 
-
+button {
+  background-color: transparent;
+  border: none
+}
 
 
