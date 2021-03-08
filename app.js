@@ -1,5 +1,4 @@
 //global vars
-// var eventTable = document.querySelector('table');
 var apm;
 var wrapper = $('<container>').addClass('main-table');
 var now = moment().hour()
@@ -17,7 +16,10 @@ for(i=9; i<18; i++){
 
     // var apmConvert = moment(i, "hh").format('LT')
 
-    var textArea = $('<td>').addClass('present col-lg-8 col-md-4 col-sm-2');
+    var textArea = $('<td>').addClass('present col-lg-8 col-md-4 col-sm-2').append('<textarea id=text wrap="hard">');
+    // textArea.append('<textarea id=text wrap="hard">');
+    var someText = $('textarea').value
+    // console.log(someText)
     var save = $('<td>').addClass('saveBtn col-md-2 col-sm-1');
     var saveButton = $('<i>').addClass('fas fa-save fa-2x');
     
@@ -28,24 +30,21 @@ for(i=9; i<18; i++){
         }
     var apmConvert = moment(i , 'HH:mm').format('hh')
     var time = $('<td>').addClass('hour col-md-2 col-sm-1').text(apmConvert + ` ${apm}`);
-    // console.log(apmConvert)
 
     //switch coloring between past, present & future.
-    if (i < now ) {
-        textArea.removeClass('present')
-        textArea.addClass('past')
-    } else if (i > now) {
-        textArea.removeClass('present')
-        textArea.addClass('future')
-    }
-    // console.log(apmConvert)
+        if (i < now ) {
+            textArea.removeClass('present')
+            textArea.addClass('past')
+        } else if (i > now) {
+            textArea.removeClass('present')
+            textArea.addClass('future')
+        }
+  
 
 
-    //add input textarea to textArea cell
-    //compare the i with currnt hour and add color class to textArea
+    // console.log($.trim(someText))
 
-    //data stay presist, create function to save text in localstorage 
-    //add event listner to save icon
+   
 
 
 
@@ -53,9 +52,8 @@ for(i=9; i<18; i++){
     save.append(saveButton)
     
 }
+
 $('.container').append(wrapper);
-
-
 
 
 
