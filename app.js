@@ -16,13 +16,13 @@ function createRows() {
         // style elements with bootstrap grid system
         var textareaEl = $('<textarea>').attr('wrap', 'hard').attr('id', `text-${i}`).val(localStorage.getItem(i))
         var textArea = $('<td>').addClass('present col-lg-8 col-md-4 col-sm-2').append(textareaEl);
+        // create save button and add unique id for each button
         var save = $('<button>').addClass('saveBtn col-md-2 col-sm-1');
         save.attr('id', 'button-'+i)
-        // create save button
+        // add the save icon from fontawesome to button celll
         var sbtn = $('<i>').addClass('subBtn fas fa-save fa-2x');
-        //var saveButton = $('<button>')
         save.append(sbtn)
-            // findout AM / PM 
+        // findout AM / PM 
             if (i < 12) {
                 apm = 'AM'
             } else {
@@ -53,22 +53,10 @@ createRows();
 
 //save button function
 $('button').click(function (event) {
-    // let id = $(this)[0].id;
-    // console.log(id)
+    //extract the hour and associated text area cell usuing jQuery 
     let hour = $(this)[0].id.split('-')[1];
-    // console.log(hour[1])
     let data = $(this).prev().children().val();
     console.log(data);
     //set localstorage hour, value from textarea
     localStorage.setItem(hour, data);
 });
-
-//use split to get the hour from the button, this will return an array of strings, get the index of the array that has the hour "buttton-9" and you split at "-", this will be an array [button, 9]
-//use the hour from the split
-//find the textarea associated to this row from the hour parsed, we have our textarea ids as textarea-9 etc "textarea-"+ hour, string concatenation 
-//this will be a variable assigned to the query select of the textarea using id of the textarea
-//after we find the textarea id, convert to a jquery element from the id and parse the value using .val() $(querySelectorEl)
-//function getStoredItems
-//load all the saved items 
-//loop through all the rows, $("textarea") = all rows / .each() or forEach(row), or for-loop 
-//localStorage.getItem(hour, value)
